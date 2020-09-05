@@ -1,0 +1,5 @@
+/node_modules
+/server/config
+/server/config/firebase-config.js
+/server/AWS
+/.vscode

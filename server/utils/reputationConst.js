@@ -1,0 +1,7 @@
+module.exports = {
+    USER_GOT_LIKED: 10,
+    USER_GOT_UNLIKED: -10,
+    USER_SOLD_ITEM: 15,
+    USER_BOUGHT_ITEM: 5,
+    USER_POST_COMMENT: 2
+}

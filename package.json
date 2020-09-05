@@ -1,0 +1,28 @@
+{
+  "name": "vmarket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "env-cmd -f ./server/config/.env nodemon server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.743.0",
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "busboy": "^0.3.1",
+    "busboy-body-parser": "^0.3.2",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.1",
+    "firebase": "^7.19.1",
+    "firebase-admin": "^9.1.1",
+    "paypal-rest-sdk": "^1.8.1",
+    "validator": "^13.1.1"
+  }
+}
