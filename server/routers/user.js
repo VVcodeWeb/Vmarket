@@ -1,5 +1,8 @@
 const express = require("express")
 const auth = require("../utils/auth")
+const multer = require("multer")
+const path = require("path")
+const upload = multer({dest: (path.join(__dirname, "../tmp")), limits: 1024*1024*100})
 const router = express.Router()
 const {createUser, updateUser,
         deleteUser, getUser, 
@@ -9,7 +12,7 @@ const {createUser, updateUser,
 //------------------------CURD---------------------------
 router.get("/:handle", getUser)
 router.post("/", createUser)
-router.post("/image", auth, uploadImage)
+router.post("/image", upload.any(), uploadImage)
 router.patch("/", auth, updateUser)
 router.delete("/", auth, deleteUser)
 

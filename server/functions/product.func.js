@@ -34,8 +34,12 @@ module.exports = {
         }
     },
     createProduct: async (req, res) => {
-        const seller = req.user
+        const seller = req.user || "valeriy"
+        console.log(req.body)
+        console.log(req.files)
+        console.log(req.headers)
         const productInfo = req.body
+        productInfo.price = parseInt(productInfo.price)
         if (isEmpty(productInfo.title) || isEmpty(productInfo.category) || productInfo.price <= 0)
             res.status(400).json({ error: "Information about the product is invalid" })
         try {
@@ -44,7 +48,7 @@ module.exports = {
                 category: productInfo.category,
                 price: productInfo.price,
                 description: productInfo.description,
-                seller: seller.handle,
+                seller: seller.handle || seller,
                 averageRate: 0,
                 numberOfRates: 0,
                 sold: false,
@@ -53,7 +57,7 @@ module.exports = {
             await PRODUCT_REF.doc().set(product)
             res.status(201).json({ product })
         } catch (e) {
-            res.status(500).json({ error: e.code })
+            res.status(500).json({ errorCode: e.code, error: e.message, custom:"what" })
         }
     },
     updateProduct: async (req, res) => {

@@ -10,7 +10,7 @@ const {
 
 //------------------------CURD---------------------------
 router.get("/product/:productId", getProduct)
-router.post("/product", auth, createProduct)
+router.post("/product",  createProduct)
 router.patch("/product/:productId", auth, updateProduct)
 router.delete("/product/:productId", auth, deleteProduct)
 

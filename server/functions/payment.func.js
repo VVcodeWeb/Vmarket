@@ -35,7 +35,6 @@ module.exports = {
         } else {
             byuer = undefined
         }
-        console.log(buyer)
         try {
             const productRef = await PRODUCT_REF.doc(productId).get()
             if (!productRef.exists) {

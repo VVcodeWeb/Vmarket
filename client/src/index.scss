@@ -1,0 +1,31 @@
+@import "~bootstrap/scss/bootstrap";
+// Include only the reset
+/* @import '~instantsearch.css';
+// or include the full Algolia theme
+@import '~instantsearch.css';  */
+body {
+  margin: 0;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+*{
+  box-sizing: border-box;
+}
