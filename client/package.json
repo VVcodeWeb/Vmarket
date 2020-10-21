@@ -22,7 +22,7 @@
     "react-dom": "^16.13.1",
     "react-instantsearch-dom": "^6.7.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
+    "react-scripts": "3.4.4",
     "styled-components": "^5.2.0"
   },
   "scripts": {
